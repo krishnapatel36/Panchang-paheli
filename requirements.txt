@@ -1,5 +1,2 @@
-svgwrite
-streamlit
-itertools
-copy
-collections
+svgwrite==1.4.3
+streamlit==1.33.0
