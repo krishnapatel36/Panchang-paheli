@@ -1,6 +1,4 @@
 import streamlit as st
-
-# Import necessary functions and classes from your level scripts
 from pentominoes import ALL_PARTS as ALL_PARTS_1
 from pentominoes_level2 import ALL_PARTS as ALL_PARTS_2
 from pentominoes_level3 import ALL_PARTS as ALL_PARTS_3
@@ -24,9 +22,10 @@ def level1():
                 U="#88CCCC", V="#99BBDD", W="#AAAAEE",
                 X="#BB99DD", Y="#CC88CC", Z="#DD99BB")
 
-    number = st.text_input("Insert a Date", value=1, placeholder="Type a Date...")
+    date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    number = st.selectbox("Select Date",date)
     number=int(number)
-    st.write(f"solution of date :{number}")
+    st.write(f"Solution of date :{number}")
     if number in (29,30,31,32): 
         if number == 29:
             number = 33
@@ -81,19 +80,25 @@ def level2():
                 U="#88CCCC", V="#99BBDD", W="#AAAAEE",
                 X="#BB99DD", Y="#CC88CC", Z="#DD99BB")
 
-
-    number1 = st.text_input("Insert a Date", value=1, placeholder="Type a Date...")
+    date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    number1 = st.selectbox("Select Date",date)
     number1=int(number1)
 
     month_map = {
-        'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4,
-        'may': 5, 'jun': 6, 'jul': 8, 'aug': 9,
-        'sep': 10, 'oct': 11, 'nov': 12, 'dec': 13
+        'January': 1, 'February': 2, 'March': 3, 'April': 4,
+        'May': 5, 'June': 6, 'July': 8, 'August': 9,
+        'September': 10, 'October': 11, 'November': 12, 'December': 13
     }
-    month_input = st.text_input("Enter the month (e.g., jan, feb, etc.): ",value="jan", placeholder="Type a month...")
+    months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ]
 
+    # Dropdown for selecting a month
+    month_input = st.selectbox("Select Month:", months)
     if number1 in range(1,32):
-        if month_input in ("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"):
+        if month_input in months:
             month_number1 = month_map[month_input]
             m_row = (month_number1 - 1) // 7
             m_column = (month_number1 - 1) % 7
@@ -128,7 +133,7 @@ def level2():
                 all_solutions.extend(DISTINCT_SOLUTIONS)
             solutions_svg(all_solutions, filename='first_solution.svg', columns=1, colour=COLOURS.get)
             svg_content = open("first_solution.svg", "r").read()
-            st.write(f"solution for : {number1} {month_input}")
+            st.write(f"Solution for : {number1} {month_input}")
             st.image(svg_content, width=300)
 
         else:
@@ -148,28 +153,36 @@ def level3():
                 U="#88CCCC", V="#99BBDD", W="#AAAAEE",
                 X="#BB99DD", Y="#CC88CC", Z="#DD99BB")
 
-    number2 = st.text_input("Insert a Date", value=1, placeholder="Type a Date...")
+    date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    number2 = st.selectbox("Select Date",date)
     number2=int(number2)
 
     month_map = {
-        'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4,
-        'may': 5, 'jun': 6, 'jul': 8, 'aug': 9,
-        'sep': 10, 'oct': 11, 'nov': 12, 'dec': 13
+        'January': 1, 'February': 2, 'March': 3, 'April': 4,
+        'May': 5, 'June': 6, 'July': 8, 'August': 9,
+        'September': 10, 'October': 11, 'November': 12, 'December': 13
     }
 
+    months = [
+        "January", "February", "March", "April",
+        "May", "June", "July", "August",
+        "September", "October", "November", "December"
+    ]
+
+
+    days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     day_map = {
-        'mon': (6,3), 'tue': (6,4),  'wed': (6,5), 'thu': (6,6),
-        'fri': (7,4), 'sat': (7,5), 'sun': (7,6)
+        'Monday': (6,3), 'Tuesday': (6,4),  'Wednesday': (6,5), 'Thursday': (6,6),
+        'Friday': (7,4), 'Saturday': (7,5), 'Sunday': (7,6)
     }
 
     # Get user input for the month
-    month_input1 = st.text_input("Enter the month (e.g., jan, feb, etc.): ",value="jan", placeholder="Type a month...")
-
-    day_input = st.text_input("Enter the day (e.g., mon, tue, etc.): ",value="mon", placeholder="Type a month...")
+    month_input1 = st.selectbox("Select Month:", months)
+    day_input = st.selectbox("Select Day",days)
 
     if number2 in range(1,32):
-        if month_input1 in ("jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"):
-            if day_input in ("mon","tue","wed","thu","fri","sat","sun"):
+        if month_input1 in months:
+            if day_input in days:
                 month_number2 = month_map[month_input1]
                 day_number2 = day_map[day_input]
                 m_row = (month_number2 - 1) // 7
@@ -206,7 +219,7 @@ def level3():
                     
                 solutions_svg(all_solutions, filename='first_solution.svg', columns=7, colour=COLOURS.get)
                 svg_content = open("first_solution.svg", "r").read()
-                st.write(f"solution for : {number2} {month_input1} {day_input}")
+                st.write(f"Solution for : {number2} {month_input1} {day_input}")
                 st.image(svg_content, width=2000)
             else:
                 st.write("Enter valid infomation")
@@ -215,8 +228,6 @@ def level3():
     else:
                 st.write("Enter valid infomation")
     
-
-# Execute the corresponding level function based on the selection
 if level == "Level 1":
     level1()
 elif level == "Level 2":
