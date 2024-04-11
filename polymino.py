@@ -11,7 +11,7 @@ Attributes:
 from collections import defaultdict
 from copy import deepcopy
 from itertools import product
-# from svgwrite import Drawing
+from svgwrite import Drawing
 
 # polyminoes drawn in ascii
 DOMINOES = """
