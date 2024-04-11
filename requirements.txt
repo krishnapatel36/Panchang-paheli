@@ -1,0 +1,5 @@
+svgwrite
+streamlit
+itertools
+copy
+collections
