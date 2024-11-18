@@ -612,8 +612,8 @@ def unique_grids(grids):
     return unique
 
 
-def solutions_svg(solutions, filename, columns=1, size=25, padding=5,
-                  colour=lambda _: "white", stroke_colour="black",date_number,date_position,level,
+def solutions_svg(solutions, filename,date_number,date_position,level,columns=1, size=25, padding=5,
+                  colour=lambda _: "white", stroke_colour="black",
                   stroke_width=3, empty=' '):
     """Format polyomino tilings as an SVG image.
 
