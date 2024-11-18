@@ -660,7 +660,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,columns=1,
             row, col = date_position  # Position from date_map
             x_coord = col * (1.69 * size) + oj + ((row + (col % 8) / 8) * size)
             y_coord = row * (np.sqrt(2) * size) + oi
-            drawing.add(drawing.text(str(date_number), insert=(x_coord, y_coord+5), fill='white', font_size=20, text_anchor="middle"))
+            drawing.add(drawing.text(str(date_number), insert=(x_coord, y_coord), fill='white', font_size=10, text_anchor="middle"))
 
         edges = drawing.path(stroke_width=stroke_width)
         group.add(edges)
