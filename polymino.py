@@ -12,7 +12,7 @@ from collections import defaultdict
 from copy import deepcopy
 from itertools import product
 from svgwrite import Drawing
-
+import numpy as np
 # polyminoes drawn in ascii
 DOMINOES = """
 I
