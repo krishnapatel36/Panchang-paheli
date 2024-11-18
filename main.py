@@ -61,7 +61,7 @@ def level1():
             DISTINCT_SOLUTIONS = unique_grids(SOLUTIONS)
             all_solutions.extend(DISTINCT_SOLUTIONS)  
 
-        solutions_svg([all_solutions[0]], filename='first_solution.svg', columns=7, colour=COLOURS.get)
+        solutions_svg([all_solutions[0]], filename='first_solution.svg',date_number=number,date_position=(row,column),level=1,columns=7, colour=COLOURS.get)
         svg_content = open("first_solution.svg", "r").read()
         st.image(svg_content, width=2000)
     else:
