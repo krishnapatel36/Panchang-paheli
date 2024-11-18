@@ -613,7 +613,7 @@ def unique_grids(grids):
 
 
 def solutions_svg(solutions, filename, columns=1, size=25, padding=5,
-                  colour=lambda _: "white", stroke_colour="black",
+                  colour=lambda _: "white", stroke_colour="black",date_number,date_position,level,
                   stroke_width=3, empty=' '):
     """Format polyomino tilings as an SVG image.
 
@@ -656,13 +656,14 @@ def solutions_svg(solutions, filename, columns=1, size=25, padding=5,
                 piece.add(drawing.rect((j * size + oj, i * size + oi),
                                        (size, size)))
 
-        # put in "empty" pieces
-        for i, j in solution.coord:
-            if grid[i][j] == empty:
-                piece = drawing.g(fill='white')
-                group.add(piece)
-                piece.add(drawing.rect((j * size + oj, i * size + oi),
-                                       (size, size)))
+        if level==1:
+            row, col = date_position  # Position from date_map
+            x_coord = col * (1.69 * size) + oj + ((row + (col % 8) / 8) * size)
+            y_coord = row * (np.sqrt(2) * size) + oi
+            drawing.add(drawing.text(str(date_number), insert=(x_coord, y_coord+5), fill='white', font_size=20, text_anchor="middle"))
+
+        edges = drawing.path(stroke_width=stroke_width)
+        group.add(edges)
 
         edges = drawing.path(stroke_width=stroke_width)
         group.add(edges)
