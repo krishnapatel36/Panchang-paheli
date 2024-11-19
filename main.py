@@ -5,7 +5,14 @@ from polymino import generate_all, Grid, PENTOMINOES, solutions_svg, unique_grid
 from dlx import DLX
 
 st.title("Panchang Paheli")
-
+st.markdown("""
+<style>
+    body {
+        background-color: #282a36;
+        color: #f8f8f2;
+    }
+</style>
+""", unsafe_allow_html=True)
 # Dropdown menu to select the level
 level = st.selectbox("Select Level", ["Date Puzzle", "Date-Day-Month Puzzle"])
 
