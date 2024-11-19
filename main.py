@@ -16,10 +16,10 @@ def level1():
         x = str(x)
         return (len(x), x)
 
-    COLOURS = dict(I="#FFFFFF", F="#FFFFFF", L="#FFFFFF",
-                P="#FFFFFF", N="#FFFFFF", T="#FFFFFF",
-                U="#FFFFFF", V="#FFFFFF", W="#FFFFFF",
-                X="#FFFFFF", Y="#FFFFFF", Z="#FFFFFF")
+    COLOURS = dict(I="#FFFFF0", F="#FFFFF0", L="#FFFFF0",
+                P="#FFFFF0", N="#FFFFF0", T="#FFFFF0",
+                U="#FFFFF0", V="#FFFFF0", W="#FFFFF0",
+                X="#FFFFF0", Y="#FFFFF0", Z="#FFFFF0")
 
     date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     number = st.selectbox("Select Date",date)
@@ -71,10 +71,10 @@ def level3():
         x = str(x)
         return (len(x), x)
 
-    COLOURS = dict(I="#FFFFFF", F="#FFFFFF", L="#FFFFFF",
-                P="#FFFFFF", N="#FFFFFF", T="#FFFFFF",
-                U="#FFFFFF", V="#FFFFFF", W="#FFFFFF",
-                X="#FFFFFF", Y="#FFFFFF", Z="#FFFFFF")
+    COLOURS = dict(I="#FFFFF0", F="#FFFFF0", L="#FFFFF0",
+                P="#FFFFF0", N="#FFFFF0", T="#FFFFF0",
+                U="#FFFFF0", V="#FFFFF0", W="#FFFFF0",
+                X="#FFFFF0", Y="#FFFFF0", Z="#FFFFF0")
 
     date=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
     number2 = st.selectbox("Select Date",date)
