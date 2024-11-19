@@ -650,7 +650,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
                 drawing.add(drawing.text(
                     str(date_number-4),
                     insert=(x_coord, y_coord),
-                    fill='white',
+                    fill='black',
                     font_size=size // 2,  # Adjust font size relative to cell size
                     text_anchor="middle",  # Center text horizontally
                     alignment_baseline="middle"  # Center text vertically
@@ -659,7 +659,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
                     drawing.add(drawing.text(
                     str(date_number),
                     insert=(x_coord, y_coord),
-                    fill='white',
+                    fill='black',
                     font_size=size // 2,  # Adjust font size relative to cell size
                     text_anchor="middle",  # Center text horizontally
                     alignment_baseline="middle"  # Center text vertically
@@ -673,7 +673,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
             drawing.add(drawing.text(
                 str(date_number),
                 insert=(date_x_coord, date_y_coord),
-                fill='white',
+                fill='black',
                 font_size=size // 2,
                 text_anchor="middle",
                 alignment_baseline="middle"
@@ -687,7 +687,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
             drawing.add(drawing.text(
                 month_name,
                 insert=(month_x_coord, month_y_coord),
-                fill='white',
+                fill='black',
                 font_size=size // 2,
                 text_anchor="middle",
                 alignment_baseline="middle"
@@ -701,7 +701,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
             drawing.add(drawing.text(
                 day_name,
                 insert=(day_x_coord, day_y_coord),
-                fill='white',
+                fill='black',
                 font_size=size // 2,
                 text_anchor="middle",
                 alignment_baseline="middle"
