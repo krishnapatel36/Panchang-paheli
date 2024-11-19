@@ -688,7 +688,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
                 month_name,
                 insert=(month_x_coord, month_y_coord),
                 fill='white',
-                font_size=size // 3,
+                font_size=size // 2,
                 text_anchor="middle",
                 alignment_baseline="middle"
             ))
@@ -702,7 +702,7 @@ def solutions_svg(solutions, filename,date_number,date_position,level,month_name
                 day_name,
                 insert=(day_x_coord, day_y_coord),
                 fill='white',
-                font_size=size // 3,
+                font_size=size // 2,
                 text_anchor="middle",
                 alignment_baseline="middle"
             ))
