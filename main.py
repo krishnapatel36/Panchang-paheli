@@ -62,7 +62,7 @@ def level1():
 
         solutions_svg([all_solutions[0]], filename='first_solution.svg',date_number=number,date_position=(row,column),month_name='',month_position=(0,0),day_name='',day_position=(0,0),level=1,columns=7, colour=COLOURS.get)
         svg_content = open("first_solution.svg", "r").read()
-        st.image(svg_content, width=5000)
+        st.image(svg_content, width=3000)
     else:
         st.write("Enter valid number between 1-31")
 def level3():
@@ -143,7 +143,7 @@ def level3():
                 solutions_svg(all_solutions, filename='first_solution.svg',date_number=number2,date_position=(row,column),month_name=month_input1,month_position=(m_row,m_column),day_name=day_input,day_position=day_number2,level=3,columns=7, colour=COLOURS.get)
                 svg_content = open("first_solution.svg", "r").read()
                 st.write(f"Solution for : {number2} {month_input1} {day_input}")
-                st.image(svg_content, width=2000)
+                st.image(svg_content, width=3000)
             else:
                 st.write("Enter valid infomation")
         else:
